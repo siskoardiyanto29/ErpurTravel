@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ErpurTravel Armada Pangandaran — Sewa Mobil Pribadi untuk Wisata</title>
+  <meta name="description" content="ErpurTravel Armada Pangandaran — layanan sewa mobil pribadi untuk wisata Pangandaran. Sopir berpengalaman, armada terawat, paket harian & antar-jemput." />
+  <style>
+    :root{
+      --primary:#0b8f6a;
+      --dark:#053023;
+      --muted:#556b63;
+      --card:#ffffff;
+      --bg:#f7fbf9;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue";
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:22px}
+
+    header{background:linear-gradient(90deg, rgba(11,143,106,0.06), rgba(11,143,106,0.01));position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(5,48,35,0.04)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--dark)}
+    .logo{width:46px;height:46px;border-radius:10px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;box-shadow:0 6px 18px rgba(11,143,106,0.12)}
+    nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;color:var(--dark);font-weight:700;font-size:15px}
+    .btn{background:var(--primary);color:#fff;padding:9px 12px;border-radius:10px;text-decoration:none;font-weight:700}
+    .menu-toggle{display:none;background:transparent;border:0;font-size:20px}
+
+    @media (max-width:880px){
+      nav{display:none}
+      .menu-toggle{display:inline-block}
+    }
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:24px;align-items:center;padding:36px 0}
+    .hero h1{font-size:30px;margin:0 0 10px}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 24px rgba(5,48,35,0.04)}
+
+    .search-row{display:flex;gap:10px;flex-wrap:wrap}
+    .input,select{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(5,48,35,0.06);font-size:14px}
+    .btn-primary{background:var(--primary);color:#fff;padding:10px 12px;border-radius:8px;border:0;font-weight:700;cursor:pointer}
+
+    section{padding:30px 0}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .fleet-item img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+    .testi{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;padding:18px 0}
+      .grid-3,.fleet-grid,.testi{grid-template-columns:1fr}
+    }
+
+    form{display:grid;gap:10px}
+    textarea{min-height:96px;padding:10px;border-radius:8px;border:1px solid rgba(5,48,35,0.06)}
+
+    footer{padding:18px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+    .small{font-size:13px;color:var(--muted)}
+    .badge{display:inline-block;background:rgba(11,143,106,0.12);color:var(--primary);padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="logo">NT</div>
+        <div>
+          <div style="font-weight:800">ErpurTravel Armada Pangandaran</div>
+          <div class="small">Sewa Mobil Pribadi • Wisata Pangandaran</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#fleet">Armada</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="btn" href="https://wa.me/6283134494417?text=Halo%20ErpurTravel,%20saya%20mau%20booking%20mobil" target="_blank">Booking / WA</a>
+        <button class="menu-toggle" aria-label="Buka menu" id="menuBtn">☰</button>
+      </div>
+    </div>
+
+    <div id="mobileNav" style="display:none;padding:12px 22px;background:linear-gradient(180deg,rgba(11,143,106,0.02),transparent)">
+      <nav>
+        <ul style="display:flex;flex-direction:column;gap:8px">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#fleet">Armada</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div>
+        <div class="badge">Spesialis Pangandaran • Mobil Pribadi</div>
+        <h1>ErpurTravel Armada — Sewa Mobil Pribadi untuk Wisata Pangandaran</h1>
+        <p class="muted">Nikmati liburan di Pangandaran tanpa ribet. Sewa mobil pribadi beserta sopir lokal berpengalaman — fleksibel untuk bandara, hotel, atau tur pantai & objek wisata.</p>
+
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap">
+          <a href="#fleet" class="btn">Lihat Armada</a>
+          <a href="#contact" class="small" style="align-self:center;text-decoration:underline;color:var(--primary)">Minta Penawaran</a>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="text-align:center">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=60" alt="Sewa mobil wisata" style="width:100%;height:220px;object-fit:cover;border-radius:10px;margin-bottom:12px">
+          <h3 style="margin:6px 0">Mobil Pribadi • Sopir Lokal</h3>
+          <p class="muted" style="margin:0">Layanan ramah, aman, dan sesuai protokol kebersihan.</p>
+          <div style="margin-top:12px">
+            <div class="small">Mulai dari <strong>Rp 350.000</strong>/hari (tergantung rute & lama sewa)</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+        <h2>Layanan Kami</h2>
+        <div class="small">Fokus: mobil pribadi untuk wisata & transfer di Pangandaran</div>
+      </div>
+
+      <div style="height:12px"></div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Sewa Mobil Pribadi + Sopir</h3>
+          <p class="muted">Sopir lokal berpengalaman, rute fleksibel sesuai permintaan.</p>
+        </div>
+        <div class="card">
+          <h3>Antar-Jemput (Stasiun/ Bandara)</h3>
+          <p class="muted">Penjemputan on-time — cocok untuk tamu yang tiba/berangkat.</p>
+        </div>
+        <div class="card">
+          <h3>Paket Tour Harian</h3>
+          <p class="muted">Itinerary: Pantai Pangandaran, Green Canyon, Batu Karas, dan spot terkenal lainnya.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fleet -->
+    <section id="fleet">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <h2>Armada Mobil Pribadi</h2>
+        <div class="small">Pilihan nyaman sesuai jumlah penumpang</div>
+      </div>
+
+      <div style="height:12px"></div>
+      <div class="fleet-grid">
+        <div class="card fleet-item">
+          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=60" alt="Avanza">
+          <h4 style="margin:10px 0 6px">Avanza / MPV</h4>
+          <div class="muted">Kapasitas: 4–6 orang • Praktis & irit</div>
+          <div class="small"><strong>Harga:</strong> Mulai Rp 350.000/hari</div>
+        </div>
+
+        <div class="card fleet-item">
+          <img src="https://images.unsplash.com/photo-1549921296-3f4b5c0f9a87?auto=format&fit=crop&w=1200&q=60" alt="Innova">
+          <h4 style="margin:10px 0 6px">Innova / SUV</h4>
+          <div class="muted">Kapasitas: 4–7 orang • Nyaman untuk perjalanan jauh</div>
+          <div class="small"><strong>Harga:</strong> Mulai Rp 450.000/hari</div>
+        </div>
+
+        <div class="card fleet-item">
+          <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=1200&q=60" alt="Ertiga">
+          <h4 style="margin:10px 0 6px">Ertiga / MPV</h4>
+          <div class="muted">Kapasitas: 4–6 orang • Ekonomis & nyaman</div>
+          <div class="small"><strong>Harga:</strong> Mulai Rp 320.000/hari</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start">
+        <div>
+          <h2>Kontak & Booking</h2>
+          <p class="muted">Isi form untuk minta penawaran atau langsung hubungi via WhatsApp.</p>
+
+          <form id="contactForm" onsubmit="return kirimPesan(event)">
+            <input class="input" id="name" placeholder="Nama lengkap" required>
+            <input class="input" id="phone" placeholder="No. HP / WhatsApp" required>
+            <input class="input" id="email" type="email" placeholder="Email (opsional)">
+            <select class="input" id="service">
+              <option value="">Pilih layanan</option>
+              <option value="Sewa Mobil Pribadi + Sopir">Sewa Mobil Pribadi + Sopir</option>
+              <option value="Antar-jemput">Antar-jemput</option>
+              <option value="Paket Tour Harian">Paket Tour Harian</option>
+            </select>
+            <textarea id="message" placeholder="Rincian: tanggal, lokasi penjemputan, jumlah penumpang"></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn-primary" type="submit">Kirim ke WhatsApp</button>
+              <a class="btn" href="https://wa.me/6283134494417?text=Halo%20ErpurTravel,%20saya%20mau%20booking%20mobil" target="_blank" rel="noopener">Chat WA</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Info Perusahaan</h3>
+          <p class="muted">ErpurTravel Armada Pangandaran — Sewa mobil pribadi untuk wisata</p>
+          <p class="small"><strong>Email:</strong> aseprohmatsaepulmillah@gmail.com</p>
+          <p class="small"><strong>Telepon / WA:</strong> <strong>+62 831 3449 4417</strong></p>
+          <h4>Jam Operasional</h4>
+          <p class="small muted">Senin–Minggu • 06:00 – 21:00</p>
+          <h4>Area Pelayanan</h4>
+          <p class="small muted">Pangandaran, Batu Karas, Green Canyon, Cijulang, dan sekitarnya</p>
+          <iframe src="https://maps.google.com/maps?q=Pangandaran%20Indonesia&t=&z=12&ie=UTF8&iwloc=&output=embed" style="width:100%;height:160px;border:0"></iframe>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <strong>ErpurTravel Armada Pangandaran</strong> 2025 • Semua hak cipta dilindungi</div>
+      <div class="small">Ikuti: <a href="#">Instagram</a> • <a href="#">Facebook</a></div>
+    </footer>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      if (mobileNav.style.display === 'none' || mobileNav.style.display === '') {
+        mobileNav.style.display = 'block';
+        menuBtn.innerText = '✕';
+      } else {
+        mobileNav.style.display = 'none';
+        menuBtn.innerText = '☰';
+      }
+    });
+
+    function kirimPesan(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value || '-';
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+
+      const teks = 
+`Halo ErpurTravel, saya ingin booking:
+*Nama:* ${name}
+*No. HP:* ${phone}
+*Email:* ${email}
+*Layanan:* ${service}
+*Rincian:* ${message}`;
+
+      const nomor = "6283134494417";
+      const url = `https://wa.me/${nomor}?text=${encodeURIComponent(teks)}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
+</body>
+</html>
